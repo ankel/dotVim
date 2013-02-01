@@ -1,3 +1,11 @@
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Plugins
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+
+
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -51,6 +59,8 @@ set history=700
 " Enable filetype plugins
 filetype plugin on
 filetype indent on
+set ofu=syntaxcomplete#Complete
+let g:SuperTabDefaultCompletionType = "context"
 
 " Set to auto read when a file is changed from the outside
 set autoread
@@ -122,10 +132,10 @@ set tm=500
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Enable syntax highlighting
+" Esolarizedsyntax highlighting
 syntax enable
 
-colorscheme desert
+colorscheme solarized
 set background=dark
 
 " Set extra options when running in GUI mode
@@ -245,7 +255,7 @@ set viminfo^=%
 set laststatus=2
 
 " Format the status line
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
+set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h%y\ \ \ [%l:%c]
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
