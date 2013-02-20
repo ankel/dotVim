@@ -135,7 +135,6 @@ set tm=500
 " Esolarizedsyntax highlighting
 syntax enable
 
-colorscheme solarized
 set background=dark
 
 " Set extra options when running in GUI mode
